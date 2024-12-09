@@ -1,7 +1,7 @@
 .post-header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px gray solid;
+    border-bottom: 1px #b0b0b0 solid;
     padding-bottom: 0.5rem;
 }
 .post-title {
@@ -15,8 +15,21 @@
     align-self: flex-end;
     font-size: 1.2rem;
     font-weight: lighter;
+    color: #b0b0b0;
+    font-style: italic;
 }
 
 .post-content {
     font-size: 25px;
+}
+
+.post-gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+em {
+    color: #D72638;
 }

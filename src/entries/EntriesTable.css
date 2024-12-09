@@ -5,8 +5,8 @@ ul {
 }
 
 li {
-    border-bottom: 1px solid lightgray;
-    border-image: linear-gradient(to left, transparent, gray) 1;
+    border-bottom: 1px #b0b0b0 solid;
+    border-image: linear-gradient(to left, transparent, #b0b0b0) 1;
     transition: 0.5s all;
     padding: 1rem;
 }
@@ -16,7 +16,6 @@ li:hover {
 }
 
 .entry-title {
-    color: darkslategray;
     font-size: 40px;
     user-select: none;
 }
