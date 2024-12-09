@@ -1,0 +1,22 @@
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px gray solid;
+    padding-bottom: 0.5rem;
+}
+.post-title {
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: flex-end;
+    vertical-align: bottom;
+}
+
+.post-date {
+    align-self: flex-end;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.post-content {
+    font-size: 25px;
+}

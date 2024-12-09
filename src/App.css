@@ -2,6 +2,11 @@ html {
   background-color: aliceblue;
 }
 
+::selection {
+  background: darkslategray;
+  color: white;
+}
+
 body {
   margin: 0;
   font-family: "Gowun Batang", serif;
@@ -12,4 +17,5 @@ body {
 .App-header {
   text-align: center;
   padding: 1rem;
+  border-bottom: 1px gray solid;
 }

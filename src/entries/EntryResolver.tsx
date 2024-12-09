@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import EntriesTable from "./EntriesTable";
 import EntryPage from "./EntryPage";
+import Post001 from "../content/Post001";
 
 export interface EntriesResolverProps {}
 const EntryResolver:React.FC<EntriesResolverProps> = () => {
     const components = [
-        { title: "Hello", component: () => <h1>01 - hello</h1> },
+        { title: "My First Post", component: Post001},
         { title: "Goodbye", component: () => <h1>02 - goodbye</h1> },
     ];
     const [isShowTable, setIsShowTable] = useState(true);
