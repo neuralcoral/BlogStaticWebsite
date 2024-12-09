@@ -1,4 +1,5 @@
 import React from "react";
+import "./EntryPage.css";
 
 export interface EntryPageProps {
     returnToTable: Function,
@@ -7,11 +8,13 @@ export interface EntryPageProps {
 
 const EntryPage: React.FC<EntryPageProps> = ({returnToTable, pageContents})=> {
     return (
-        <div>
-            <button onClick={() => returnToTable()}>
-                Show Table
-            </button>
-            { pageContents !== undefined && React.createElement(pageContents) }
+        <div className="page">
+            <div className="return-button" onClick={() => returnToTable()}>
+                &lt;
+            </div>
+            <div className="content">
+                { pageContents !== undefined && React.createElement(pageContents) }
+            </div>
         </div>
     );
 }

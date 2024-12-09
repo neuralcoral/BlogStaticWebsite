@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import EntriesTable from "./entries/EntriesTable";
 import EntryResolver from "./entries/EntryResolver";
 
 function App() {

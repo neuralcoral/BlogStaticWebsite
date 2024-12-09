@@ -1,3 +1,4 @@
+import './EmtriesTable.css'
 
 export interface EntriesTableProps {
     entries: {title: string, component: React.FC}[],
@@ -10,15 +11,15 @@ const EntriesTable: React.FC<EntriesTableProps> = ({entries, selectEntry}) => {
         return index.toString().padStart(numDigits, '0');
     };
     return (
-        <ul className="Entries">
+        <ul className="entries">
             {
                 entries.map(({title, component}, index) => (
                     <li key={index}>
-                        <button onClick={() => selectEntry(component)}>
+                        <div className="entry-title" onClick={() => selectEntry(component)}>
                             {formatIndex(index)} - {title}
-                        </button>
+                        </div>
                     </li>
-                ))
+                )).reverse()
             }
         </ul>
     );

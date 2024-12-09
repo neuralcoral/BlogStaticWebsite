@@ -1,3 +1,15 @@
 html {
   background-color: aliceblue;
 }
+
+body {
+  margin: 0;
+  font-family: "Gowun Batang", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.App-header {
+  text-align: center;
+  padding: 1rem;
+}

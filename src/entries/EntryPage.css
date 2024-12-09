@@ -1,0 +1,12 @@
+.page {
+    margin: 2rem;
+}
+
+.return-button {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.content {
+    margin: 1.5rem;
+}
