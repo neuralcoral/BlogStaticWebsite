@@ -21,6 +21,12 @@
 
 .post-content {
     font-size: 25px;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.post-footnotes {
+    font-size: 20px;
+    padding: 3rem 0;
 }
 
 .post-gif {
