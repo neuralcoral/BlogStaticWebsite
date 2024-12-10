@@ -7,7 +7,6 @@ export interface EntriesResolverProps {}
 const EntryResolver:React.FC<EntriesResolverProps> = () => {
     const components = [
         { title: "My First Post", component: Post000},
-        { title: "Goodbye", component: () => <h1>02 - goodbye</h1> },
     ];
     const [isShowTable, setIsShowTable] = useState(true);
     const [selectedEntry, setSelectedEntry] = useState<React.FC>();
