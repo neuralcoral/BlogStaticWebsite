@@ -1,4 +1,4 @@
-import './EmtriesTable.css'
+import './EntriesTable.css'
 
 export interface EntriesTableProps {
     entries: {title: string, component: React.FC}[],
