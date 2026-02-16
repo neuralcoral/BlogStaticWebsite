@@ -39,3 +39,18 @@
 em {
     color: #D72638;
 }
+
+blockquote {
+    font-style: italic;
+    color: #696969;
+}
+
+q {
+    font-style: italic;
+}
+
+code {
+    display: block;
+    text-align: center;
+    justify-content: center;
+}

@@ -2,11 +2,13 @@ import React, {useState} from "react";
 import EntriesTable from "./EntriesTable";
 import EntryPage from "./EntryPage";
 import Post000 from "../content/Post000";
+import Post001 from "../content/Post001";
 
 export interface EntriesResolverProps {}
 const EntryResolver:React.FC<EntriesResolverProps> = () => {
     const components = [
         { title: "My First Post", component: Post000},
+        { title: "RISC-V Emulation", component: Post001},
     ];
     const [isShowTable, setIsShowTable] = useState(true);
     const [selectedEntry, setSelectedEntry] = useState<React.FC>();
