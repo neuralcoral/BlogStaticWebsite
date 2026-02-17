@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import EntriesTable from "./EntriesTable";
 import EntryPage from "./EntryPage";
 import Post000 from "../content/Post000";
-import Post001 from "../content/Post001";
+import Post001 from "../content/post001/Post001";
 
 export interface EntriesResolverProps {}
 const EntryResolver:React.FC<EntriesResolverProps> = () => {
