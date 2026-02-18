@@ -5,7 +5,7 @@ import {AssemblerTransition} from "./decoder";
 
 export interface Post001Props {}
 
-const markdownContent = `
+const markdownContent1 = `
 # What is RISC-V?
 
 Wikipedia defines RISC-V as
@@ -14,34 +14,71 @@ Wikipedia defines RISC-V as
 
 There's a bit to unpack so let's break down the different parts.
 
-## "free and open standard"
-Free and open here means that RISC-V is publicly available and usable by anyone for any reason. This includes both private and public use cases. If you're curious, you can even read more about it on RISC-V's [FAQ](https://riscv.org/about/faq/).
+## "free and open standard..."
+Free and open here means that RISC-V is publicly available and usable by anyone for any reason. This includes both 
+private and public use cases. If you're curious, you can even read more about it on RISC-V's 
+[FAQ](https://riscv.org/about/faq/).
 
-## "ISA"
-Things heat up quickly in RISC-V's definition by diving straight into the term *instruction set architecture* (ISA). I want to avoid getting to technical for any audience that might be brand new to these concepts, but I fear that I do need to setup some context. I promise to be gentle.
+## "...ISA..."
+Things heat up quickly in RISC-V's definition by diving straight into the term *instruction set architecture* (ISA). I 
+want to avoid getting too technical for any audience that might be brand new to these concepts, but I fear that I do 
+need to set up some context. I promise to be gentle.
 
 ### Talking the Machine's Language
-In order to run programs we need to send instructions to the computer's workhorse, the *Central Processing Unit (CPU)*. Unfortunately, CPUs do not understand words like "add 4 and 5" or "does this number equal that number?". Instead we need to use a language the machine understands, a *machine language* if you will.
+In order to run programs we need to send instructions to the computer's workhorse, the *Central Processing Unit (CPU)*. 
+Unfortunately, CPUs do not understand words like "add 4 and 5" or "does this number equal that number?". Instead we need
+to use a language the machine understands, a *machine language* if you will.
 
-Machine language is written with binary, the 1s and 0s commonly associated with computers. A developer hoping to get their computer to do some work needs to construct a meaningful "sentence" the CPU can "understand".
+Machine language is written with binary, the 1s and 0s commonly associated with computers. A developer hoping to get 
+their computer to do some work needs to construct a meaningful "sentence" the CPU can "understand".
 
-For example, lets say you were a developer trying to get their RISC-V CPU to spit out of the answer of 5 + 8\*. We can then write:
+For example, lets say you were a developer trying to get their RISC-V CPU to spit out the answer of 5 + 8*. We can then 
+write:
 
-\`000100000001000000010010011\`
+\`\`\`
+00000000100000000000000100010011
+\`\`\`
 
-* \*Note: as you will see, this is a bit of a twist of the truth, but for the most part this is the binary necessary for executing the presented addition. *
+> *Note: as you will see, this is a bit of a twist of the truth
 
-What is important in the above binary is that this instruction is specific to the RISC-V ISA. If we had a a different ISA, like ARM or x86 then it would completely fail or execute something very different.
+What is important in the above binary is that this instruction is specific to the RISC-V ISA. If we had a different ISA,
+like ARM or x86 then it would completely fail or execute something very different.
 
 ### Clearing up the number soup
-It's easy to imagine that the above string of numbers seems impossible to translate, but this is where the we start moving into the territory of *assembly*.
+It's easy to imagine that the above string of numbers seems impossible to translate, but this is where we start 
+moving into the territory of *assembly*.
 
-Every ISA has its own assembly language. Assembly is just a way to transform binary into something easier for a human to read, we call this transformation a *decoding*. We can decode machine languages (aka the binary) into assembly language as well as *encode* assembly language into machine language.
-`
+Every ISA has its own assembly language. Assembly is just a way to transform binary into something easier for a human to 
+read, we call this transformation a *decoding*. We can decode machine languages (aka the binary) into assembly language 
+as well as *encode* assembly language into machine language.
+`;
+const markdownContent2 = `
+Encoding from assembly language to binary has a special name, it is called *assembling*. The binary we saw in the earlier
+example described the operation \`ADDI x2, x0, 8\`. As you see, this language is much easier to read.
+
+
+RISC-V has two variations depending if you're using a 64- or 32-bit architecture; ignore what this means for now, I
+promise to go over it in later sections. In order to simplify discussion and implementation, I will focus on 32-bit 
+RISC-V, also known as RV32I. 
+
+RV32I has 40 unique "instructions". This includes the \`ADDI\` instruction, which handles addition.
+
+## "...based on reduced instruction set computer (RISC) principles"
+Last and not least is getting to the topic of RISC, and oh boy is this is a much bigger topic. Admittedly, this discussion
+is a bit out of the realm for this current project. However, I'll do my best to simplify it. 
+
+There are two dominant philosophies for ISAs, complex instruction set computer (CISC) and reduced instruction set 
+computer (RISC). RISC focuses on having simple, but optimized instructions. On the other hand, CISC has several, large 
+specialized instructions. 
+
+On average, the same program written in CISC has fewer instructions than in RISC. However, CISC tends to be more 
+difficult to build, individual instructions can be slower, and the CPU is larger.
+
+# Where Next?
+I'll dive into what an emulator is before moving to the nitty-gritty details of RISC-V's RV32I.
+`;
 
 const Post001: React.FC<Post001Props> = () => {
-    const [binary, setBinary] = React.useState("00000000100000001000000100010011");
-
     return <>
         <div className="post-header">
             <div className="post-title">RISC-V Emulation</div>
@@ -49,9 +86,13 @@ const Post001: React.FC<Post001Props> = () => {
         </div>
         <div className="post-content">
 
-            <ReactMarkdown>{markdownContent}</ReactMarkdown>
+            <ReactMarkdown>{markdownContent1}</ReactMarkdown>
             {/* The React Flow Visualization */}
-            <AssemblerTransition assembly={"addi x2, x0, 8"} binary={"00000000100000000000000100010011"}/>
+            <AssemblerTransition assembly={"ADDI x2, x0, 8"} binary={"00000000100000000000000100010011"}/>
+
+            <ReactMarkdown>
+                {markdownContent2}
+            </ReactMarkdown>
 
         </div>
 
