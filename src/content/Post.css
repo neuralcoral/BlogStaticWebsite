@@ -48,13 +48,68 @@ blockquote {
 q {
     font-style: italic;
 }
+pre {
+    /* Standard wrapping logic */
+    white-space: pre-wrap;       /* CSS3 */
+    white-space: -moz-pre-wrap;  /* Firefox */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 
 pre code {
     display: block;
     text-align: center;
     justify-content: center;
+    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
 p code {
     font-size: 0.85em;
 }
+
+/* Container to handle centering and vertical spacing */
+.post-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+.post-figure {
+    margin: 0;
+    --img-max-width: 420px;
+
+    width: 90%;
+    max-width: var(--img-max-width);
+
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.post-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.post-figcaption {
+    margin-top: 0.75rem;
+    width: 100%;
+    text-align: center;
+}
+
+.post-figcaption .rmd-typography {
+    text-align: center;
+    display: block;
+}
+
+.post-figure.is-small { --img-max-width: 280px; }
+.post-figure.is-large { --img-max-width: 600px; }

@@ -1537,6 +1537,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@juggle/resize-observer@^3.3.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
+  integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
+
 "@leichtgewicht/ip-codec@^2.0.1":
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz#4fc56c15c580b9adb7dc3c333a134e540b44bfb1"
@@ -1582,6 +1587,30 @@
     loader-utils "^2.0.4"
     schema-utils "^4.2.0"
     source-map "^0.7.3"
+
+"@react-md/theme@^5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@react-md/theme/-/theme-5.1.6.tgz#046618e5ff957dfa714850b3de8b60aafa11823e"
+  integrity sha512-1F4nhG44xGTmlymbMLZlDmon+NY5Br8TvFkzabh6CvUzD61x5dwzAD1dCM4EuQCKNQNDg/qn68jNz1h7eg/vyg==
+  dependencies:
+    "@react-md/utils" "^5.1.6"
+
+"@react-md/typography@^5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@react-md/typography/-/typography-5.1.6.tgz#e07490ca474a24c577ac3865bfad494aa595076c"
+  integrity sha512-LXDYVivv+KDRXoux+OSmhJo3nLa+5Eq5l+wfUarif6n4MVFchi1oP2XCZQwgEfD81ZGExIfQ9n+1jwHSr/4ltg==
+  dependencies:
+    "@react-md/theme" "^5.1.6"
+    "@react-md/utils" "^5.1.6"
+    classnames "^2.3.1"
+
+"@react-md/utils@^5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@react-md/utils/-/utils-5.1.6.tgz#d7778b3176ad66e62ffe041f30bfc7d901e58642"
+  integrity sha512-ZrhKOkIcqEzMb3SotRg+RP/uzSE4atbRqfhSBeSn2Wbli94sTxmNihNACrVCE8fZ9UTaeipIogcOs90l8E16Yw==
+  dependencies:
+    "@juggle/resize-observer" "^3.3.0"
+    classnames "^2.3.1"
 
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
@@ -3255,6 +3284,11 @@ cjs-module-lexer@^1.0.0:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.4.3.tgz#0f79731eb8cfe1ec72acd4066efac9d61991b00d"
   integrity sha512-9z8TZaGM1pfswYeXrUpzPrkx8UnWYdhJclsiYMm6x/w5+nN+8Tf/LnAgfLGQCm59qAOxU8WwHEq2vNwF6i4j+Q==
+
+classnames@^2.3.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
+  integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
 
 clean-css@^5.2.2:
   version "5.3.3"

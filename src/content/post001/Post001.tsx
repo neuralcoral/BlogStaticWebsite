@@ -95,25 +95,6 @@ const Post001: React.FC<Post001Props> = () => {
             </ReactMarkdown>
 
         </div>
-
-            {/*<h3>A bit of a history lesson...</h3>*/}
-            {/*Computers have evolved <i>a lot</i> over the last century. The first commercial computers would take up*/}
-            {/*whole rooms. Over time these machines got smaller and smaller thanks to technological advances. These*/}
-            {/*advancements coalesced into the computer sitting on your desk, on your lap, or even in your hand as you read*/}
-            {/*this on your morning commute.*/}
-            {/*<br/>*/}
-            {/*A lot of the technological developments, like the invention of the transistor, are a story for another time.*/}
-            {/*For the ISA discussion, I want to hone in on the transition of how developers communicated with computers.*/}
-            {/*The earliest developers wrote programs using <a href="https://en.wikipedia.org/wiki/Punched_card">punched*/}
-            {/*cards</a>. These were literal paper cards, similar to an index or post card, that were hole-punched to with*/}
-            {/*code. As an aside, if you ever were curious, punched cards are the reason why it is recommended to use 80*/}
-            {/*characters per row; the standard IBM punched card supported 80 columns per card.*/}
-            {/*<br/>*/}
-            {/*As you can imagine, working with punched cards can get really tricky. It was basically a way of writing*/}
-            {/*<br/>*/}
-
-
-
     </>;
 }
 
