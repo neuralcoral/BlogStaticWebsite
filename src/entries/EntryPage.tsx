@@ -2,19 +2,24 @@ import React from "react";
 import "./EntryPage.css";
 
 export interface EntryPageProps {
-    returnToTable: Function,
+    returnToTable: () => void, // Explicit typing for clarity
     pageContents: React.FC | undefined
 }
 
-const EntryPage: React.FC<EntryPageProps> = ({returnToTable, pageContents})=> {
+const EntryPage: React.FC<EntryPageProps> = ({returnToTable, pageContents}) => {
     return (
         <div className="page">
-            <div className="return-button" onClick={() => returnToTable()}>
-                &lt;
-            </div>
-            <div className="content">
-                { pageContents !== undefined && React.createElement(pageContents) }
-            </div>
+            <header className="entry-header">
+                <button className="return-button" onClick={returnToTable} aria-label="Return to table">
+                    &lt;
+                </button>
+                <div className="entry-title-wrapper">
+                    {/* If your pageContents starts with an <h1>,
+                        the CSS below will align it with the button.
+                    */}
+                    { pageContents && React.createElement(pageContents) }
+                </div>
+            </header>
         </div>
     );
 }

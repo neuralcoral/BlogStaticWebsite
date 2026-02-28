@@ -2,11 +2,33 @@
     margin: 2rem;
 }
 
-.return-button {
-    font-size: 30px;
-    cursor: pointer;
-}
-
 .content {
     margin: 1.5rem;
+}
+
+.entry-header {
+    display: flex;
+    align-items: baseline; /* Aligns the bottom of the '<' with the text baseline */
+    gap: 1rem;            /* Space between button and title */
+    margin-bottom: 2rem;
+}
+
+.return-button {
+    background: none;
+    border: none;
+    font-size: 2rem;       /* Make it match your <h1> size */
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+/* This targets the <h1> that is generated inside your pageContents */
+.entry-title-wrapper h1 {
+    margin: 0;            /* Remove default margin that pushes the title down */
+    font-size: 2rem;
+}
+.content h1 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2;
 }
