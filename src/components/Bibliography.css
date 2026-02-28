@@ -1,0 +1,82 @@
+.bibliography {
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.bib-disclosure {
+    border-top: 1px solid #b0b0b0;
+    padding-top: 1rem;
+}
+
+.bib-summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    color: #696969;
+    transition: color 0.2s ease;
+}
+
+.bib-summary::-webkit-details-marker {
+    display: none;
+}
+
+.bib-summary:hover {
+    color: #D72638; /* Signature neuralcoral red */
+}
+
+.bib-summary::before {
+    content: '▶';
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+details[open] .bib-summary::before {
+    transform: rotate(90deg);
+}
+
+.bib-count {
+    font-weight: lighter;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+.bib-list {
+    margin-top: 1.5rem;
+    padding-left: 0.5rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bib-entry {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.bib-number {
+    flex-shrink: 0;
+    font-weight: bold;
+    color: #696969;
+    min-width: 1.5rem;
+}
+
+.bib-link {
+    word-break: break-all;
+    color: #D72638;
+    text-decoration: none;
+}
+
+.bib-link:hover {
+    text-decoration: underline;
+}
