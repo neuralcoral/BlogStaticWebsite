@@ -2,14 +2,14 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import EntriesTable from "./EntriesTable";
 import EntryPage from "./EntryPage";
-import Post000 from "../content/Post000";
 import Post001 from "../content/post001/Post001";
 import Post002 from "../content/post002/Post002";
+import Post003 from "../content/post003/Post003";
 
 const entries = [
-    // { title: "My First Post", component: Post000 },
     { title: "RISC-V Emulation", component: Post001 },
-    { title: "What is Emulation?", component: Post002 }
+    { title: "What is Emulation?", component: Post002 },
+    { title: "Starting a Simple Robotics Project", component: Post003}
 ];
 
 const EntryResolver: React.FC = () => {
